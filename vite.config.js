@@ -20,7 +20,7 @@ export default defineConfig({
   // Tillåt frontendens publika Railway-domän
   preview: {
     allowedHosts: [
-      '07webservicesrestaurantfrontendapplication-production.up.railway.app'
+      'petra1971-restaurant-frontend.up.railway.app'
     ]
   },
 })
