@@ -40,3 +40,6 @@ npm run build
 .env.production	Du kör npm run build för produktion
 Vite bygger in värdet på VITE_API_URL i JavaScript-filerna under byggprocessen.
 Senare kan vi också konfigurera värdet direkt i Railways miljövariabler.
+
+Address i Railway:
+07javawebservicesassignment1restaurantapi-production.up.railway.app

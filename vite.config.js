@@ -10,9 +10,17 @@ export default defineConfig({
     vue(),
     vueDevTools(),
   ],
+
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
+  },
+
+  // Tillåt frontendens publika Railway-domän
+  preview: {
+    allowedHosts: [
+      '07webservicesrestaurantfrontendapplication-production.up.railway.app'
+    ]
   },
 })
