@@ -38,6 +38,11 @@ const router = createRouter({  // En route kopplar en webbadress till en Vue-kom
       name: 'admin-restaurants',
       component: AdminRestaurantsView,
       meta: { requiredRole: 'ADMIN' }
+    },
+    {
+      path: '/staff/bookings',
+      name: 'staff-bookings',
+      component: () => import('../views/StaffBookingsView.vue')
     }
   ],
 })

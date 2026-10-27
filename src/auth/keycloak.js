@@ -1,7 +1,7 @@
 import Keycloak from 'keycloak-js'
 
 const keycloak = new Keycloak({
-    url: 'https://keycloak-production-75ba.up.railway.app',
+    url: import.meta.env.VITE_KEYCLOAK_URL,
     realm: 'restaurant-api',
     clientId: 'restaurant-frontend'
 })
