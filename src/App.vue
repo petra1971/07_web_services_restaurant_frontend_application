@@ -8,22 +8,15 @@ RouterLink fungerar ungefär som en HTML-länk, men låter Vue Router byta sida 
 -->
 
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
+import AppHeader from './components/AppHeader.vue'
 </script>
 
 <template>
   <div class="app">
-    <header>
-      <h1>Restaurant Booking</h1>
+    <AppHeader />
 
-      <nav>
-        <RouterLink to="/">Hem</RouterLink>
-        <RouterLink to="/restaurants">Restauranger</RouterLink>
-        <RouterLink to="/bookings">Bokningar</RouterLink>
-      </nav>
-    </header>
-
-    <main>
+    <main class="main-content">
       <RouterView />
     </main>
   </div>
@@ -31,26 +24,11 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <style scoped>
 .app {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 20px;
+  min-height: 100vh;
+  width: 100%;
 }
 
-header {
-  margin-bottom: 30px;
-}
-
-nav {
-  display: flex;
-  gap: 20px;
-}
-
-nav a {
-  color: #2563eb;
-  text-decoration: none;
-}
-
-nav a.router-link-active {
-  font-weight: bold;
+.main-content {
+  width: 100%;
 }
 </style>

@@ -6,10 +6,11 @@ const loading = ref(true)
 const error = ref(null)
 
 const apiUrl = import.meta.env.VITE_API_URL
+console.log("API URL:", apiUrl)
 
 async function loadRestaurants() {
   try {
-    const response = await fetch(`${apiUrl}/restaurants?page=0&size=10`)  // fetch() – anropar mitt Spring Boot-API
+    const response = await fetch(`${apiUrl}/restaurants?page=0&size=5`)  // fetch() – anropar mitt Spring Boot-API
 
     if (!response.ok) {
       throw new Error(`HTTP-fel: ${response.status}`)
