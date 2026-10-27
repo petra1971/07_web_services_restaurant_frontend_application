@@ -32,7 +32,7 @@ async function loadRestaurants() {
 
   try {
     const response = await fetch(
-        `${apiUrl}/restaurants`,
+        `${apiUrl}/restaurants?page=0&size=100`,
         {
           headers: {
             'API-Version': '1'
